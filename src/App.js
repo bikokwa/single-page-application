@@ -32,7 +32,7 @@ const router = createBrowserRouter([
     path: "/",
     element: <RootLayout />,
     children: [
-      { index: "", element: <HomePage /> },
+      { index: "/", element: <HomePage /> },
       { path: "/events", element: <EventsPage /> },
       { path: "/events/:eventId", element: <EventDetailPage /> },
       { path: "/events/new", element: <NewEventPage /> },
