@@ -31,7 +31,7 @@ const EventDetailPage = () => {
 export default EventDetailPage;
 
 async function loadEvent(id) {
-  const response = await fetch("http://localhost:8080/events");
+  const response = await fetch("http://localhost:8080/events/" + id);
 
   if (!response.ok) {
     // throw new Response(JSON.stringify({ message: "Could not fetch events." }), {
@@ -45,7 +45,7 @@ async function loadEvent(id) {
     );
   } else {
     const responseData = await response.json();
-    return responseData.events;
+    return responseData.event;
   }
 }
 
